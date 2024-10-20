@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <h1 class="header_text">I am really sorry meri Jaan?</h1>
+            <h1 class="header_text">Please forgive?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWE0cGNxbGF3anE1MGU3MHlnbXJjNnMzOGUyeWdwZmZ2a3dvcWswdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fhLgA6nJec3Cw/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function nextPage() {
+            window.location.href = "yes.html"; // Redirects to "yes.html" when the Yes button is clicked
+        }
+
+        function moveButton() {
+            var noButton = document.getElementById('noButton');
+            var x = Math.random() * (window.innerWidth - noButton.offsetWidth) - 85;
+            var y = Math.random() * (window.innerHeight - noButton.offsetHeight) - 48;
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${x}px`;
+            noButton.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
